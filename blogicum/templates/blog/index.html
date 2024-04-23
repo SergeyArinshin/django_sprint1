@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block title %}
+
 Лента записей
+
 {% endblock %}
 {% block content %}
 
@@ -18,14 +20,14 @@
         Дата: {{post.date}}
       </li>
       <li>
-        Категория: <a href="/category/{{ post.category }}">{{ post.category }}</a>
+        Категория: <a href="{{ post.category }}">{{ post.category }}</a>
       </li>
     </ul>
     <!-- Первые 10 слов -->
     <p>
       {{ post.text|truncatewords:10 }}
     </p>
-    <a href="/posts/{{post.id}}">Читать полный текст</a>
+    <a href="{{ post.id }}">Читать полный текст</a>
   </article>
   {% endfor %}
 </div>
