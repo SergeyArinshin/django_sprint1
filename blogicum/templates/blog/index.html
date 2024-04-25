@@ -18,14 +18,14 @@
           Дата: {{ post.date }}
         </li>
         <li>
-          <a href="{% url 'blog:category_posts' category_slug=post.category %}">{{ post.category }}</a>
+          <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
         </li>
       </ul>
     <!-- Первые 10 слов -->
       <p>
         {{ post.text|truncatewords:10 }}
       </p>
-      <a href="{% url 'blog:post_detail' post_id=post.id %}">Читать полный текст</a>
+      <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
     </article>
     {% endfor %}
   </div>
