@@ -14,7 +14,7 @@
           Дата: {{ post.date }}
         </li>
         <li>
-          Категория:<a href="/category/{{ post.category }}">{{ post.category }}</a>
+          Категория:<a href="{% url 'blog:post_detail' post_id=post.id %}">Читать полный текст</a>
         </li>
       </ul>
       <p>
